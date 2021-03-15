@@ -1,2 +1,2 @@
 cd C:\Users\vdiaconu\apache-jmeter-5.3\bin 
-jmeter -n -t C:\Users\vdiaconu\apache-jmeter-5.3\Mytest\Testrun.jmx -l C:\Users\vdiaconu\WORK\BaseLine\BaseLineResult_BaseLineResult_Today__%date:~0,10%_%time:~0,2%_%time:~3,2%.csv -j C:\Users\vdiaconu\WORK\BaseLine\_Log.csv -e -o C:\Users\vdiaconu\WORK\BaseLine_%date:~0,10%_%time:~0,2%_%time:~3,2% -JThread=1  -JDuration=30
+jmeter -n -t C:\Users\vdiaconu\apache-jmeter-5.3\Mytest\Testrun.jmx -l C:\Users\vdiaconu\WORK\BaseLine\BaseLineResult_BaseLineResult_Today__%date:~0,10%_%time:~0,2%_%time:~3,2%.csv -j C:\Users\vdiaconu\WORK\BaseLine\_Log.csv -e -o C:\Users\vdiaconu\WORK\BaseLine_%date:~0,10%_%time:~0,2%_%time:~3,2% -JThread=1  -JDuration=120
