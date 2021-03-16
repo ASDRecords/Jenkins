@@ -1,2 +1,25 @@
-cd C:\Users\vdiaconu\apache-jmeter-5.3\bin 
-jmeter -n -t C:\Users\vdiaconu\apache-jmeter-5.3\Mytest\Testrun.jmx -l C:\Users\vdiaconu\WORK\BaseLine\BaseLineResult_BaseLineResult_Today__%date:~0,10%_%time:~0,2%_%time:~3,2%.csv -j C:\Users\vdiaconu\WORK\BaseLine\_Log.csv -e -o C:\Users\vdiaconu\WORK\BaseLine_%date:~0,10%_%time:~0,2%_%time:~3,2% -JThread=1  -JDuration=100
+pipeline {
+    agent any
+    stages {
+        stage ('Run Load Test') {
+			input {
+                message "please enter values"
+                ok "Ok"
+                submitter "no matter"
+                parameters {
+                    string(name: 'duration', defaultValue: '60')
+                    string(name: 'users', defaultValue: '5')
+                    string(name: 'rampUp', defaultValue: '10')
+                }
+            }
+            steps {
+                echo 'Starting test with Jmeter'
+                bat """
+                 CALL C:\Users\vdiaconu\OneDrive - ENDAVA\Desktop\WORK\JMeter\jmeterLaunch.bat -n -t Testrun.jmx ^
+                    -Jduration=${duration} -Jusers=${users} -jrampUp=${rampUp} -Jjmeterengine.force.system.exit=true
+                """
+                echo 'Test completed'
+            }
+        }
+    }
+}
