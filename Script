@@ -15,10 +15,10 @@ pipeline {
             steps {
                 echo 'Starting test with Jmeter'
                 bat """
-                 CALL C:\\apache-jmeter-5.4.1\\bin\\jmeter.bat -n -t C:\\NewPerformanceTask\\EdidtedNewJmeterscript.jmx ^
-                    -Jduration=${duration} -Jusers=${users} -jrampUp=${rampUp} -Jjmeterengine.force.system.exit=true
+                 CALL C:\\Users\\vdiaconu\\apache-jmeter-5.3\\bin\\jmeter.bat -n -t C:\\Users\\vdiaconu\\WORK\\JMeter\\Testrun.jmx ^
+	        	-Jduration=${duration} -Jusers=${users} -jrampUp=${rampUp} -Jjmeterengine.force.system.exit=true
                 """
-                echo 'Test completed  '
+                echo 'Test completed da da  '
             }
         }
     }
