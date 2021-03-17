@@ -24,6 +24,4 @@ pipeline {
     }sdgdfhsgf
 }
 sadfer
-sdvsdv
-xfvdv
 dsfdaf
