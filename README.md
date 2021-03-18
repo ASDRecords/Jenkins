@@ -6,8 +6,3 @@ sdgfasdfg
 xdfgdf
 sdfgdsfsdvav
 sdfsdf
-dzfvb
-dsfgdsf
-vnfxgj
-cvcvbcvn
-dfvsdfdf
