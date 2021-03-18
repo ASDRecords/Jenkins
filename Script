@@ -13,6 +13,6 @@ node {
    ]
    echo 'Execution is Done'
    stage 'Stage 3'
-   // ..................................
+   // ...................................
    echo 'Stage 3 is Done'
 }
