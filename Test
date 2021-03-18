@@ -1,4 +1,4 @@
-pipeline {
+
 node {
    stage 'Stage 1'
    // ..................................
@@ -16,5 +16,4 @@ node {
    stage 'Stage 3'
    // ..................................
    echo 'Stage 3 is Done'
-}
 }
