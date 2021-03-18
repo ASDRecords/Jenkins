@@ -1,9 +1,9 @@
 node {
    stage 'Stage 1'
-   // do what you need to do to build your application
+   // ..................................
    echo 'Stage 1 is Done'
    stage 'Stage 2'
-   // do what you need to do to deploy your application
+   // ..................................
    echo 'Stage 2 is Done'
    stage 'Execute BaseLine Performance Tests'
    build job: 'BaseLineScript', 
@@ -13,6 +13,6 @@ node {
    ]
    echo 'Execution is Done'
    stage 'Stage 3'
-   // do what you need to do to build your application
+   // ..................................
    echo 'Stage 3 is Done'
 }
