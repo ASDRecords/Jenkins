@@ -1,25 +1,20 @@
 pipeline {
-    agent any
-    stages {
-        stage ('Run Load Test') {
-			input {
-                message "please enter values"
-                ok "Ok"
-                submitter "no matter"
-                parameters {
-                    string(name: 'duration', defaultValue: '')
-                    string(name: 'users', defaultValue: '')
-                    string(name: 'rampUp', defaultValue: '')
-                }
-            }
-            steps {
-                echo 'Starting test with Jmeter'
-                bat """
-		CALL C:\\Users\\vdiaconu\\apache-jmeter-5.3\\bin\\jmeter.bat -n -t C:\\Users\\vdiaconu\\WORK\\JMeter\\Testrun.jmx ^
-		-Jduration=360 -Jusers=1 -jrampUp=${rampUp} -Jjmeterengine.force.system.exit=true
-                """
-                echo 'Test completed'
-            }
-        }
-    }
+node {
+   stage 'Stage 1'
+   // ..................................
+   echo 'Stage 1 is Done'
+   stage 'Stage 2'
+   // ..................................
+   echo 'Stage 2 is Done'
+   stage 'Execute BaseLine Performance Tests'
+   build job: 'BaseLineScript', 
+   parameters: [
+       [$class: 'StringParameterValue', name: 'Duration', value: '360'],
+       [$class: 'StringParameterValue', name: 'Users', value: '1']
+   ]
+   echo 'Execution is Done'
+   stage 'Stage 3'
+   // ..................................
+   echo 'Stage 3 is Done'
+}
 }
