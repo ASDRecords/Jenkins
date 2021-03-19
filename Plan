@@ -6,9 +6,9 @@ node {
    // ..................................
    echo 'Stage 2 is Done'
    stage 'Execute BaseLine Performance Tests'
-   build job: 'Taurus_FreeStule'
+   build job: 'Taurus_FreeStyle'
    echo 'Execution is Done'
    stage 'Stage 4'
    // ...................................
-   echo 'Stage 4 is Doneeeeeeeeeee'
+   echo 'Stage 4 is Done'
 }
