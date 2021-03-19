@@ -1,31 +1,11 @@
-{
-    "execution": [
-        {
-            "concurrency": 5,
-            "hold-for": "5s",
-            "ramp-up": "10",
-            "scenario": "json_example" 
-        }
-    ],
-    "scenarios": {
-        "json_example": {
-            "retrieve-resources": false,
-                "requests": [
-                    "http://example.com/"
-                ]
-        }            
-    },
-    "reporting": [
-        {
-            "module": "final-stats"
-        },
-        {
-            "module": "console"
-        }
-    ],
-    "settings": {
-        "check-interval": "5s",
-        "default-executor": "jmeter"
-    },
-    "provisioning": "local"
+node {
+       stage 'Stage 1'
+       // ..................................
+       echo 'Stage 1 is Done'
+       stage 'Stage 2'
+       // ..................................
+       echo 'Stage 2 is Done'
+      stage 'Execute BaseLine Taurus Performance Tests'
+       build job: 'Taurus_FreeStyle',
+       echo 'Stage 3 is Done'
 }
