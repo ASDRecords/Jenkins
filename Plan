@@ -1,0 +1,31 @@
+{
+    "execution": [
+        {
+            "concurrency": 5,
+            "hold-for": "5s",
+            "ramp-up": "10",
+            "scenario": "json_example" 
+        }
+    ],
+    "scenarios": {
+        "json_example": {
+            "retrieve-resources": false,
+                "requests": [
+                    "http://example.com/"
+                ]
+        }            
+    },
+    "reporting": [
+        {
+            "module": "final-stats"
+        },
+        {
+            "module": "console"
+        }
+    ],
+    "settings": {
+        "check-interval": "5s",
+        "default-executor": "jmeter"
+    },
+    "provisioning": "local"
+}
