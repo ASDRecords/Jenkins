@@ -12,3 +12,25 @@ node {
    // ...................................
    echo 'Stage 4 is Docvbne'
 }
+
+
+
+node {
+   stage('Build') {
+      // Run the Taurus build
+   }
+   stage('Performance Tests') {
+    parallel(
+        BlazeMeterTest: {
+            dir ('C:\Users\vdiaconu\.jenkins\workspace\Taurus_FreeStyle') {
+                sh 'bzt jmeter.yml -report'
+            }
+        },
+        Analysis: {
+            sleep 60
+        })
+   }
+
+   stage(‘Deploy’) {
+   }
+}
