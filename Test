@@ -13,7 +13,7 @@ node {
        [$class: 'StringParameterValue', name: 'Users', value: '1']
    ]
   echo 'Stage 3 is Done'
-   stage 'Execute BaseLine Performance Tests'
+   stage 'Execute BaseLine Taurus Performance Tests'
    build job: 'Taurus_FreeStyle',
    echo 'Stage 3 is Done'
    stage 'Stage 4'
