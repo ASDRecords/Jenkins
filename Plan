@@ -1,11 +1,14 @@
 node {
-       stage 'Stage 1'
-       // ..................................
-       echo 'Stage 1 is Done'
-       stage 'Stage 2'
-       // ..................................
-       echo 'Stage 2 is Done'
-      stage 'Execute BaseLine Taurus Performance Tests'
-       build job: 'Taurus_FreeStyle',
-       echo 'Stage 3 is Doneeee'
+   stage 'Stage 1'
+   // ..................................
+   echo 'Stage 1 is Done'
+   stage 'Stage 2'
+   // ..................................
+   echo 'Stage 2 is Done'
+   stage 'Execute BaseLine Performance Tests'
+   build job: 'Taurus_FreeStule', 
+   echo 'Execution is Done'
+   stage 'Stage 4'
+   // ...................................
+   echo 'Stage 4 is Doneeeeeeeeeee'
 }
