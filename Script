@@ -19,5 +19,5 @@ node {
    echo 'Stage 3 is Done'
    stage 'Stage 4'
    // ...................................
-   echo 'Stage 4 is Done'
+   echo 'Stage 4 is Doneeeeeeeeeee'
 }
