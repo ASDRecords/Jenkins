@@ -1,5 +1,5 @@
 node {
-   stage('Ping ENVIRONMENT') 
+   stage('Ping ENV') 
    {echo ping 172.23.176.132}
    stage('Execute Performance Tests') 
    build job: 'Taurus_FreeStyle',
