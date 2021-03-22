@@ -1,5 +1,11 @@
 node {
-   
-   stage('Execute Performance Tests') 
-   build job: 'Taurus_FreeStyle',
-      }
+   stage 'Stage 1'
+   // ..................................
+   echo 'Stage 1 is Done'
+   stage 'Stage 2'
+   // ..................................
+   echo 'Stage 2 is Done'
+   stage 'Execute BaseLine Performance Tests'
+  build job: 'Taurus_FreeStyle'
+
+}
