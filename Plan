@@ -1,11 +1,13 @@
 node {
-   stage 'Stage 1'
-   // ..................................
-   echo 'Stage 1 is Done'
-   stage 'Stage 2'
-   // ..................................
-   echo 'Stage 2 is Done'
-   stage 'Execute BaseLine Performance Tests'
+//Run JMeret Performance Test
+  stage 'Stage 1'
+  echo 'Stage 1 is Done'
+  stage 'Execute BaseLine Taurus-Performance Tests'
   build job: 'Taurus_FreeStyle'
-
+  stage 'Stage 1 is Done'
+  echo 'Stage 2 is Done'
+//Run Taurus Performance Test
+  stage 'Execute BaseLine JMeter-Performance Tests'
+  build job: 'BaseLineScript'
+  stage 'Stage 2 is Done'
 }
