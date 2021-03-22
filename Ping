@@ -1,0 +1,30 @@
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+
+class Ping 
+{
+	public static Boolean isReachable(String 172.23.176.132) {
+		Logger logger = LoggerFactory.getLogger('com.example.utils.system.ping')
+		logger.debug("[Ping.isReachable] isReachable called with hostname: {}", hostname)
+
+		if (! hostname?.trim()) {
+			logger.lifecycle("[Ping.isReachable] hostname is null or empty.")
+			return false
+		}
+
+		String pingargs = (System.properties['os.name'].toLowerCase().contains('windows')) ? '-n 4' : '-c 4'
+		logger.debug("[Ping.isReachable] ping args are [{}]", pingargs)
+
+		logger.lifecycle("[Ping.isReachable] Pinging {}...", hostname)
+		String response = "ping ${hostname} ${pingargs}".execute().text
+
+		Boolean isAlive = false
+        	logger.debug("[Ping.isReachable] Ping response is:\n{}", response)
+        	response.eachLine() { line ->
+            		if (line.startsWith('Reply from') || line.startsWith('64 bytes from')) {
+                		isAlive = true
+            		}
+		}
+        	return isAlive
+	}
+}
