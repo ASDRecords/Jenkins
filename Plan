@@ -1,19 +1,7 @@
 node {
-   stage('Build') {
-      // Run the Taurus build
+   stage('Ping ENVIRONMENT') 
+   {echo ping 172.23.176.132}
+   stage('Execute Performance Tests') 
+   build job: 'Taurus_FreeStyle',
+   stage(‘Deploy’)
    }
-   stage('Performance Tests') {
-    parallel(
-        BlazeMeterTest: {
-            dir ('C:\\Users\\vdiaconu\\.jenkins\\workspace\\Taurus_FreeStyle') {
-                sh 'bzt jmeter.yml -report'
-            }
-        },
-        Analysis: {
-            sleep 60
-        })
-   }
-
-   stage(‘Deploy’) {
-   }
-}
