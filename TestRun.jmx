@@ -319,8 +319,8 @@
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - user list" enabled="true">
               <stringProp name="delimiter">,</stringProp>
               <stringProp name="fileEncoding"></stringProp>
-              <stringProp name="filename">C:/Users/vdiaconu/apache-jmeter-5.3/MyTest/UserList.txt</stringProp>
-              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="filename">C:/Users/vdiaconu/WORK/JMeter/UserList.csv</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
               <boolProp name="quotedData">false</boolProp>
               <boolProp name="recycle">true</boolProp>
               <stringProp name="shareMode">shareMode.all</stringProp>
