@@ -1,0 +1,11 @@
+value,
+samsung
+mp3
+Tablets
+Nokia
+USB
+mac
+Scanners
+HDD
+Camera
+MicroSD
