@@ -3,5 +3,5 @@ pipeline {
    stages {
        stage('Ping ENVIRONMENT') {steps { build job: 'Ping ENV'}}
        stage('Run S-Script') {steps {script {echo 'Run test with Taurus'
-                bzt "TestRun.jmx -report -o settings.artifacts-dir=artifacts"
+                bzt "TestRun.jmx TaurusBZT.yml -report -o settings.artifacts-dir=artifacts"
                 echo 'Test completed'}  }  }  }  }
