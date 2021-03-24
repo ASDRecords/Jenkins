@@ -1,7 +1,7 @@
 pipeline {
    agent any
    stages {
-       stage('Run S-Script') {
+       stage('Run SS-Script') {
            steps {
                script {
                 echo 'Run test with Taurus'
