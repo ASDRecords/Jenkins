@@ -1,0 +1,14 @@
+pipeline {
+   agent any
+   stages {
+       stage('read') {
+           steps {
+               script {
+                echo 'Run test with Taurus'
+                bzt "TestRun.jmx -report -o settings.artifacts-dir=artifacts"
+                echo 'Test completed'
+               }
+           }
+       }
+   }
+}
