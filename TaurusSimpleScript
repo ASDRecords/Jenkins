@@ -1,7 +1,7 @@
 pipeline {
    agent any
    stages {
-       stage('Ping Environment') {steps { build job: 'Ping ENV'}}
+       stage('Ping ENVIRONMENT') {steps { build job: 'Ping ENV'}}
        stage('Run S-Script') {steps {script {echo 'Run test with Taurus'
                 bzt "TestRun.jmx -report -o settings.artifacts-dir=artifacts"
                 echo 'Test completed'}  }  }  }  }
